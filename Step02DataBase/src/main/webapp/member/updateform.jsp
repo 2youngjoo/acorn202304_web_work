@@ -21,20 +21,20 @@
 	<div class="container">
 		<h1>회원 정보 수정 양식</h1>
 		<form action="update.jsp" method="post">
-			<div>
-				<label for="num">번호</label>
+			<div class="mb-1">
+				<label class="form-label" for="num">번호</label>
 				<input type="text" id="num" name="num" value="<%=dto.getNum()%>" readonly/>
 			</div>
-			<div>
-				<label for="num">이름</label>
+			<div class="mb-1">
+				<label class="form-label" for="num">이름</label>
 				<input type="text" id="name" name="name" value="<%=dto.getName()%>"/>
 			</div>
-			<div>
-				<label for="num">주소</label>
+			<div class="mb-1">
+				<label class="form-label" for="num">주소</label>
 				<input type="text" id="addr" name="addr" value="<%=dto.getAddr()%>"/>
 			</div>
-			<button type="submit">수정 확인</button>
-			<button type="reset">취소</button>
+			<button class="btn btn-outline-primary" type="submit">수정 확인</button>
+			<button class="btn btn-outline-warning" type="reset">취소</button>
 		</form>
 	</div>
 </body>
