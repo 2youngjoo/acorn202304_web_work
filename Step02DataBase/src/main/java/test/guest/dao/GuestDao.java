@@ -189,7 +189,7 @@ public class GuestDao {
 			// DbcpBean 객체를 이용해서 Connection 객체를 얻어온다(Connection Pool에서 얻어오기)
 			conn = new DbcpBean().getConn();
 			// 실행할 sql 문
-			String sql = "SELECT num, writer, content, regdate"
+			String sql = "SELECT num, writer, content, pwd, regdate"
 					+ " FROM board_guest"
 					+ " ORDER BY num ASC ";
 			pstmt = conn.prepareStatement(sql);
@@ -204,6 +204,7 @@ public class GuestDao {
 	            dto.setNum(rs.getInt("num"));
 	            dto.setWriter(rs.getString("writer"));
 	            dto.setContent(rs.getString("content"));
+	            dto.setPwd(rs.getString("pwd"));
 	            dto.setDate(rs.getString("regdate"));
 	            //ArrayList 객체에 누적시키기
 	            list.add(dto);
