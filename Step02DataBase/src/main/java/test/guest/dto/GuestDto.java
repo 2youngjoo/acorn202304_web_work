@@ -2,10 +2,10 @@ package test.guest.dto;
 
 public class GuestDto {
 	private int num;
-	private String date;
 	private String writer;
 	private String content;
 	private String pwd;
+	private String date;
 	
 	// 생성자
 	public GuestDto() {
