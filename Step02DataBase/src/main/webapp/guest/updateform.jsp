@@ -14,7 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>/board_guest/updateform.html</title>
+<title>/guest/updateform.html</title>
 </head>
 <body>
 	<div class="container">
@@ -30,7 +30,7 @@
 			</div>
 			<div class="mb-1">
 				<label class="form-label" for="content">내용</label>
-				<textarea name="content" id="content" value="<%=dto.getContent() %>" cols="30" rows="10"></textarea>
+				<textarea name="content" id="content" cols="15" rows="5"><%=dto.getContent() %></textarea>
 			</div>
 			<button class="btn btn-outline-primary" type="submit">수정 확인</button>
 			<button class="btn btn-outline-warning" type="reset">취소</button>

@@ -14,7 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>/board_guest/list.jsp</title>
+<title>/guest/list.jsp</title>
 <style>
 	h1{
 	text-align: center;
@@ -66,8 +66,8 @@
 						<a href="updateform.jsp?num=<%= tmp.getNum() %>">수정</a>
 					</td>
 					<td>
-						<form action="delete.jsp?num=<%=tmp.getNum() %> "method="post">
-							<input type="text" name="pwd" id="pwd"/>
+						<form action="delete.jsp?num=<%=tmp.getNum() %>" method="post">
+							<input type="text" name="pwd" id="pwd" placeholder="비밀번호 입력..."/>
 								<span class="visually-hidden">삭제</span>
 								<button type="submit">삭제</button>
 						</form>
