@@ -84,7 +84,7 @@ public class GuestDao {
 			rs = pstmt.executeQuery();
 			// 반복문 돌면서 ResultSet에 담긴 내용 추출
 			while (rs.next()) {
-				//ResultSet에 cursor가 위치 한 곳의 칼럼 정보를 얻어와서 MemberDto 객체에 담고
+				//ResultSet에 cursor가 위치 한 곳의 칼럼 정보를 얻어와서 GuestDto 객체에 담고
 	            dto = new GuestDto();
 	            dto.setNum(num);
 	            // 이름과 주소는 ResultSet으로 부터 얻어내서 담는다.
@@ -199,7 +199,7 @@ public class GuestDao {
 			rs = pstmt.executeQuery();
 			// 반복문 돌면서 ResultSet에 담긴 내용 추출
 			while (rs.next()) {
-				//ResultSet에 cursor가 위치 한 곳의 칼럼 정보를 얻어와서 MemberDto 객체에 담고
+				//ResultSet에 cursor가 위치 한 곳의 칼럼 정보를 얻어와서 GuestDto 객체에 담고
 				GuestDto dto = new GuestDto();
 	            dto.setNum(rs.getInt("num"));
 	            dto.setWriter(rs.getString("writer"));
