@@ -4,6 +4,7 @@ public class MemberDto {
 	private int num;
 	private String name;
 	private String addr;
+	
 	// 생성자
 	public MemberDto() {
 		

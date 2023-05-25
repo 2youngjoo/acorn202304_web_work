@@ -31,3 +31,4 @@
 	response.sendRedirect(cPath+"/member/list.jsp");
 	
 %>    
+ 
