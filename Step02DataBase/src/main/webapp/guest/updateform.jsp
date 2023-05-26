@@ -15,10 +15,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>/guest/updateform.html</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="container">
-		<h1>방명록 수정</h1>
+		<h1>방명록 글 수정</h1>
 		<form action="update.jsp" method="post">
 			<div class="mb-1">
 				<label class="form-label" for="num">번호</label>
@@ -38,4 +39,4 @@
 	</div>	
 </body>
 </html>
-
+ 

@@ -11,16 +11,28 @@
 <head>
 <meta charset="UTF-8">
 <title>index.jsp</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js></script>
 </head>
 <body>
-	<div class="container">
-	<h1>인덱스 홈페이지 입니다.</h1>
-	<p>${pageContext.request.contextPath }</p>
-	<ul>
-		<li><a href="${pageContext.request.contextPath }/member/list.jsp">회원 목록 보기</a></li>
-		<li><a href="${pageContext.request.contextPath }/guest/list.jsp">방명록 목록 보기</a></li>
-	</ul>
-	</div>
+	<%-- 
+		/include/navbar.jsp 페이지에게 이 부분만 응답하도록 한다. 
+		include되는 jsp 페이지에 파라미터를 전달할 수 도 있다.
+	--%>
+		<!-- navbar 입장에서는 ?current=index 형식의 
+			 파라미터가 전달된 것이나 마찬가지다!
+		-->
+	<jsp:include page="/include/navbar.jsp">
+	<jsp:param value="index" name="current"/> 
+	</jsp:include>
+   <div class="container">
+      <h1>인덱스 페이지 입니다.</h1>
+      <ul>
+         <li><a href="${pageContext.request.contextPath }/member/list.jsp">회원 목록 보기</a></li>
+         <li><a href="${pageContext.request.contextPath }/guest/list.jsp">방명록 목록 보기</a></li>
+      </ul>
+   </div>
 </body>
 </html>
+
 
