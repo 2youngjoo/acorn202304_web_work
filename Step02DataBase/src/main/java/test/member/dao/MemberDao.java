@@ -127,7 +127,7 @@ public class MemberDao {
 			String sql="DELETE FROM member"
 					+ " WHERE num=?";
 			pstmt=conn.prepareStatement(sql);
-			// 실행할 sql 문이 미환성이라면 역여기서 완성
+			// 실행할 sql 문이 미환성이라면 여기서 완성
 			pstmt.setInt(1, num);
 			// sql 문을 수행하고 변화된(추가, 수정, 삭제된) row의 갯수 리턴 받기
 			rowCount=pstmt.executeUpdate();			
