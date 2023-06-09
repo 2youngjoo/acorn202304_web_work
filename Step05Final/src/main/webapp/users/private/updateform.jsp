@@ -42,11 +42,11 @@
       	<form action="update.jsp" method="post">
 	         <input type="hidden" name="profile" 
 	            value="<%=dto.getProfile()==null ? "empty" : dto.getProfile()%>"/>
-	         <div>
+	         <div class="mb-2">
 	            <label for="id">아이디</label>
 	            <input type="text" id="id" value="<%=dto.getId() %>" readonly/>
 	         </div>
-	         <div>
+	         <div class="mb-2">
 	            <label for="email">이메일</label>
 	            <input type="text" id="email" name="email" value="<%=dto.getEmail()%>"/>
 	         </div>

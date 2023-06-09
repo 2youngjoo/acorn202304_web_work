@@ -26,13 +26,13 @@
 		<!-- 폼에 입력한 정보 외에 추가로 같이 전송 할 값이 있으면 input type="hidden"을 활용 -->
 		<input type="hidden" name="url" value="<%=url %>"/>
 		
-			<div>
+			<div class="mb-2">
 				<label class="form-label" for="id">아이디</label>
 				<input class="form-control" type="text" name="id" id="id"/>
 			</div>
-			<div>
+			<div class="mb-2">
 				<label class="form-label" for="pwd">비밀번호</label>
-				<input class="form-control" type="text" name="pwd" id="pwd"/>
+				<input class="form-control" type="password" name="pwd" id="pwd"/>
 			</div>
 			<button class="btn btn-primary" type="submit">로그인</button>
 		</form>			

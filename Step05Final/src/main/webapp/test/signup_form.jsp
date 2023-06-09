@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>다양한 form 디자인</h1>
+		<h1>폼 테스트 페이지</h1>
 		<form action="signup.jsp" method="post">
 			<div class="form-floating mb-2">
 				<!-- request.Parameter("id")하게 되면 id 값이 name 값과 같아야함 -->
