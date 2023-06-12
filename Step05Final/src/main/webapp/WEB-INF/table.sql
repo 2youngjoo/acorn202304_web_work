@@ -35,9 +35,12 @@ create table board_cafe(
 	num number primary key, -- 글 번호
 	writer varchar2(100) not null, -- 작성자 (로그인된 아이디)
 	title varchar2(100) not null, -- 제목
-	content clob, -- 글 내용
+	content clob, -- 글 내용(clob = 대용량 문자 열을 저장할 때)
 	viewCount number, -- 조회수
 	regdate date --글 작성일
 );
 -- 게시글의 번호를 얻어낼 시권스
 create sequence board_cafe_seq;
+
+
+

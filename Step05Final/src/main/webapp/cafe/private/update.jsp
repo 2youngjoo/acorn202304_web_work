@@ -2,39 +2,49 @@
 <%@page import="test.cafe.dto.CafeDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	// 폼 전송되는 title 읽어온다
-	String title=request.getParameter("title");
-	String content=request.getParameter("content");
-	// 글의 작성자는 HttpSession 객체에서 읽어온다
-	String writer=(String)session.getAttribute("id");
-	// 업로드된 글의 정보를 CafeDto에 담고
+<%-- 
 	CafeDto dto = new CafeDto();
-	dto.setWriter(writer);
+	int num=Integer.parsInt(request.getParameter("num"));
+	dto.setNum(num);
+	
+	String title=request.getParameter("title");
 	dto.setTitle(title);
+	
+	String content=request.getParameter("content");
 	dto.setContent(content);
-	//DB 에 저장하고 응답하기
-	boolean isSuccess=CafeDao.getInstance().insert(dto);
+
+ --%>   
+<jsp:useBean id="dto" class="test.cafe.dto.CafeDto"></jsp:useBean>
+<jsp:setProperty property="num" name="dto"/>
+<jsp:setProperty property="title" name="dto"/>
+<jsp:setProperty property="content" name="dto"/>
+<%
+	// 위의 jsp 액션테그로 생성된 CafeDto 객체에 담긴 글 내용을 수정 반영하고
+	boolean isSuccess = CafeDao.getInstance().update(dto);
+	// 응답하기
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>/cafe/private/update.jsp</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
 </head>
 <body>
-	<%if(isSuccess){ %>
-		<p>
-			<%=writer %> 님이 업로드한 <%=content %> 파일을 저장했습니다.
-			<a href="${pageContext.request.contextPath }/cafe/list.jsp">목록보기</a>
-		</p>
-	<%}else{ %>
-		<p>
-			업로드 실패!
-			<a href="updateform.jsp">다시 시도</a>
-		</p>
-	<%} %>	
+	<div class="container pt-5">
+		<%if(isSuccess){%>
+            <p class="alert alert-success">
+                수정 했습니다.
+               <a class="alert-link" href="${pageContext.request.contextPath }/cafe/detail.jsp?num=<%=dto.getNum()%>">확인</a>
+            </p>
+		<%}else{ %>
+			<p class="alert alert-danger">
+               수정 실패했습니다.
+               <a class="alert-link" href="updateform.jsp?num=<%=dto.getNum() %>">다시 수정하러 가기</a>
+            </p>
+		<%} %>	
+	</div>
 </body>
 </html>
 
