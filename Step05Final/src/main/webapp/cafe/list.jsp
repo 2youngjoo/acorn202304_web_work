@@ -54,8 +54,11 @@
 <title>/cafe/list.jsp</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
 </head>
-<body>
+<body>	
 <div class="container">
+	<jsp:include page="/include/navbar.jsp">
+		<jsp:param value="Cafe" name="current"/>
+	</jsp:include>
 	<h1>게시글 목록 입니다</h1>
 	<a href="private/insertform.jsp">새글 작성</a>
 	<table class="table table-striped">
@@ -110,6 +113,4 @@
 </div>
 </body>
 </html>
-
-
 
