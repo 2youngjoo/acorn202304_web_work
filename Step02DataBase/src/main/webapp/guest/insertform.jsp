@@ -28,7 +28,7 @@
         		<label for="addr" class="form-lable">비밀번호</label>
         		<input class="form-control" type="text" name="pwd" id="pwd" placeholder="비밀번호 입력...">
         	</div>
-        	<button class="btn btn-success"type="submit">추가</button>
+        	<button class="btn btn-success" type="submit">추가</button>
 		</form>
 	</div>
 </body>
