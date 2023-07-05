@@ -2,7 +2,7 @@
 	jquery gura 플러그인
 */
 // jquery 의 기능을 확장하기(plungin)
-// 함수를 만들어서 바로 콜할 수 있다.
+// 함수를 만들어서 바로 콜 할 수 있다.
 (function($){
 	$.fn.gura=function(options){
 		// default 값 정의
